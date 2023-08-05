@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS CARS (
     color VARCHAR(20) NOT NULL,
     engine_capacity DECIMAL NOT NULL,
     release_date DATE NOT NULL,
-    price INT NOT NULL
+    price BIGINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS ORDERS (

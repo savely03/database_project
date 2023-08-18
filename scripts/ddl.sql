@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS CLIENTS (
     id BIGSERIAL PRIMARY KEY,
     full_name VARCHAR(50) NOT NULL,
     date_birthday DATE NOT NULL,
-    gender INT CHECK ( gender >= 1 and gender <= 2) NOT NULL
+    gender SMALLINT CHECK ( gender >= 1 and gender <= 2) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS CARS (

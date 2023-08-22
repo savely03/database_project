@@ -54,7 +54,3 @@ FROM (SELECT extract(MONTH FROM o.order_date)            as month,
       FROM orders o
       group by month) as a
 WHERE a.rnk = 1;
-
-
-
-

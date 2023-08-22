@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS ORDERS
 
 ALTER TABLE ORDERS
     ADD CONSTRAINT orders_pk PRIMARY KEY (id),
-    ADD CONSTRAINT orders_on_clients_fk FOREIGN KEY (client_id) REFERENCES CLIENTS (id),
-    ADD CONSTRAINT orders_on_cars_fk FOREIGN KEY (car_id) REFERENCES CARS (id);
+    ADD CONSTRAINT orders_on_clients_fk FOREIGN KEY (client_id) REFERENCES CLIENTS (id) ON DELETE CASCADE,
+    ADD CONSTRAINT orders_on_cars_fk FOREIGN KEY (car_id) REFERENCES CARS (id) ON DELETE CASCADE;
 
 
 CREATE INDEX idx_car_color ON CARS (color);
